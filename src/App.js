@@ -1,23 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import FoodBox from './component/FoodBox';
+import AddFoodForm from './component/AddFoodForm';
+import { Row } from 'antd';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <AddFoodForm />
+      <h1 className="title">Food list</h1>
+      <Row>
+        <FoodBox />
+      </Row>
     </div>
   );
 }
